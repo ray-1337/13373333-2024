@@ -1,10 +1,13 @@
 const isProd = process.env.NODE_ENV === "production";
 
+const cdnEndpoint = "itchi.2024.13373333.one";
+
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
 
-  assetPrefix: isProd ? "https://itchi.2024.13373333.one" : undefined,
+  assetPrefix: isProd ? "https://" + cdnEndpoint : undefined,
 
   poweredByHeader: false,
 
@@ -16,7 +19,7 @@ const nextConfig = {
 
   images: {
     loader: isProd ? "custom" : "default",
-    domains: isProd ? ["itchi.2024.13373333.one"] : undefined,
+    domains: isProd ? [cdnEndpoint] : undefined,
     unoptimized: isProd ? undefined : true
   },
 };
