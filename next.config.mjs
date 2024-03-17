@@ -2,6 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
 
+  poweredByHeader: false,
+
   transpilePackages: ['@tabler/icons-react'],
 
   experimental: {
