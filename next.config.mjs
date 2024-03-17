@@ -1,8 +1,10 @@
+const isProd = process.env.NODE_ENV === "production";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
 
-  assetPrefix: process.env.NODE_ENV === "production" ? "https://itchi.2024.13373333.one" : undefined,
+  assetPrefix: isProd ? "https://itchi.2024.13373333.one" : undefined,
 
   poweredByHeader: false,
 
