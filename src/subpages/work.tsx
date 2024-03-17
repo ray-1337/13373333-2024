@@ -7,10 +7,6 @@ import { SetSectionChosenContext } from "@/pages";
 import Scrollbar from 'smooth-scrollbar';
 import style from "@/styles/pages/subpages/work.module.css";
 
-// nextjs image
-import Image from "next/image";
-import ImageLoader from "@/util/ImageLoader";
-
 const defaultHexIfProminentInvalid: string = "#121112";
 
 export default function Works(props?: { active: boolean }) {
@@ -143,8 +139,7 @@ export default function Works(props?: { active: boolean }) {
                         }
 
                         <div className={style.prevboximage}>
-                          <Image
-                            loader={ImageLoader} fill={true}
+                          <img
                             src={work.imageURL.startsWith("https") ? work.imageURL : "/images/workpiece/" + WorksList[debouncedWorkSelection].imageURL}
                             loading={"eager"}
                             alt={`An image of a work named, "${work.name}"`}
@@ -206,9 +201,8 @@ export default function Works(props?: { active: boolean }) {
 
                   {/* image of the workpiece, like a preview */}
                   <div className={style.image}>
-                    <Image
+                    <img
                       crossOrigin={"anonymous"}
-                      loader={ImageLoader} fill={true}
 
                       // @ts-expect-error
                       ref={(el) => workPieceImagesRefs.current[index] = el}
