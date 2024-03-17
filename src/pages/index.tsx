@@ -3,6 +3,7 @@ import { useState, createContext } from "react";
 import { IconMail } from "@tabler/icons-react";
 import { useDebouncedValue } from "@mantine/hooks";
 import style from "@/styles/pages/index.module.css";
+import Image from "next/image";
 
 // work pieces
 import WorkPieces from "@/subpages/work";
@@ -79,7 +80,7 @@ export default function Main() {
                       <a href={val.url} target={"_blank"}>
                         {
                           typeof val.icon === "string" ? (
-                            <img src={`https://cdn.simpleicons.org/${val.icon}/black`} alt={val.icon} loading={"eager"}/>
+                            <Image src={`https://cdn.simpleicons.org/${val.icon}/black`} alt={val.icon} loading={"eager"} unoptimized={true}/>
                           ) : (
                             <val.icon/>
                           )
