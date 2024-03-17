@@ -1,0 +1,138 @@
+.frontpage {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.frontier {
+  display: flex;
+  justify-content: space-between;
+  width: 50%
+}
+
+.frontier .intro {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: space-between
+}
+
+.frontier .intro .skrillex {
+  display: flex;
+  flex-direction: column
+}
+
+.frontier .intro .skrillex .clickable {
+  margin-top: 1.25rem
+}
+
+.frontier .intro .text {
+  letter-spacing: -.1px;
+  font-size: 13px;
+  font-weight: 400;
+  font-optical-sizing: auto
+}
+
+.frontier .intro .clickable {
+  font-size: 16px
+}
+
+.frontier .intro .icon {
+  display: flex;
+  user-select: none;
+  align-items: center
+}
+
+.frontier .intro .icon * {
+  text-decoration: none;
+  color: #000
+}
+
+.frontier .intro .icon span {
+  transition: opacity 125ms linear
+}
+
+.frontier .intro .icon span:hover {
+  opacity: .65
+}
+
+.frontier .intro .icon span+span {
+  margin-left: .75rem
+}
+
+.frontier .intro .icon img {
+  width: 20px
+}
+
+.frontier .intro .icon svg {
+  width: 24px
+}
+
+.frontier .rectangle {
+  width: 40%;
+  min-height: 600px;
+  background: #121112
+}
+
+.rectangle[data-transition-woop=true] {
+  transition: transform 500ms var(--expoIn);
+  transform: scale(7)
+}
+
+.rectangle[data-transition-woop=false] {
+  transition: transform 1s var(--expoOut);
+  transform: scale(1)
+}
+
+@media only screen and (max-width: 1600px) {
+  .frontier {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .frontier {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .frontier .intro {
+    max-width: 60%;
+    margin-right: 2rem;
+  }
+
+  .frontier .rectangle {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .frontier {
+    flex-direction: column;
+    padding: 3.75rem 0;
+  }
+
+  .frontier .rectangle {
+    width: 100%;
+  }
+
+  .frontier .intro {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .frontier .intro .icon {
+    margin-top: 2.5rem;
+  }
+
+  .frontpage {
+    height: 100vh;
+    overflow-y: auto;
+    align-items: flex-start;
+  }
+}
