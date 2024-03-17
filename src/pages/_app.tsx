@@ -1,5 +1,5 @@
 import "normalize.css";
-import '@mantine/core/styles.css';
+// import '@mantine/core/styles.css';
 
 // css from mine
 import "@/styles/globals.css";
