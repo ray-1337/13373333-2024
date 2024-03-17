@@ -10,7 +10,13 @@ const nextConfig = {
 
   experimental: {
     optimizePackageImports: ["@tabler/icons-react"]
-  }
+  },
+
+  images: {
+    loader: isProd ? "custom" : "default",
+    domains: isProd ? ["itchi.2024.13373333.one"] : undefined,
+    unoptimized: isProd ? undefined : true
+  },
 };
 
 export default nextConfig;
