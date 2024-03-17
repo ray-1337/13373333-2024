@@ -1,0 +1,13 @@
+*[data-hoverable-effect-1="true"] {
+  box-shadow: inset 0 0 0 0 black;
+  transition: color .125s linear, box-shadow 500ms var(--expoOut);
+  display: block;
+  width: max-content;
+  padding: 0 4px;
+  cursor: pointer;
+}
+
+*[data-hoverable-effect-1="true"]:hover {
+  box-shadow: inset 100px 0 0 0 black;
+  color: white;
+}
