@@ -108,7 +108,7 @@ export default [
     imageURL: "cupcakke-renewed.webp",
     url: "https://www.youtube.com/playlist?list=PLGd05QsjGyxUrnRbKBGB9touvcyj51MJW",
     description: "A parodies of CupcakKe, remixed by me. i made this because i was simply bored.",
-    embedURL: "https://www.youtube-nocookie.com/embed/videoseries?list=PLGd05QsjGyxUrnRbKBGB9touvcyj51MJW"
+    embedURL: "https://www.youtube-nocookie.com/embed/videoseries?list=PLGd05QsjGyxUrnRbKBGB9touvcyj51MJW&rel=0"
   },
   {
     name: "VALORANT Funny Moment Edits",
@@ -129,7 +129,7 @@ export default [
     url: "https://youtube.com/@blobproj",
     description: "Creating a YouTube programming content with no retakes, and no fillers.",
     abandonedType: "Discontinued",
-    embedURL: "https://www.youtube-nocookie.com/embed/videoseries?list=PLHSePCXwuwyoFuhV9e23zu1eEjPSVQmmZ"
+    embedURL: "https://www.youtube-nocookie.com/embed/videoseries?list=PLHSePCXwuwyoFuhV9e23zu1eEjPSVQmmZ&rel=0"
   },
   {
     name: "Discord Bot Concerns",
