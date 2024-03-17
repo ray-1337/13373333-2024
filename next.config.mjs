@@ -2,6 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
 
+  assetPrefix: process.env.NODE_ENV === "production" ? "https://itchi.2024.13373333.one" : undefined,
+
   poweredByHeader: false,
 
   transpilePackages: ['@tabler/icons-react'],
