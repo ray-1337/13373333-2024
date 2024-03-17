@@ -1,0 +1,398 @@
+.work {
+  background: #121112;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  max-height: 100vh;
+  flex-direction: row;
+  width: 100%;
+  transition: opacity 125ms linear
+}
+
+.work[data-active=false] {
+  opacity: 0
+}
+
+.work .close_button {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 10;
+  max-height: 64px;
+  cursor: pointer
+}
+
+.work .close_button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  content: "";
+  background: #000;
+  z-index: -1;
+  transition: width 250ms var(--expoOut)
+}
+
+.work .close_button:hover:before {
+  width: 100%
+}
+
+.work .info {
+  min-width: 35%;
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10rem 0;
+  margin: 0 5rem;
+  text-transform: lowercase;
+  user-select: none
+}
+
+.work .info .title {
+  font-size: 3rem;
+  max-width: max-content;
+  transform: translateY(15%);
+  opacity: 0;
+  transition: opacity 100ms linear, transform 500ms var(--expoOut)
+}
+
+.work .info .desc {
+  font-size: 1.15rem;
+  color: #b4b4b4;
+  transform: translateY(15%);
+  opacity: 0;
+  transition: opacity 100ms linear 100ms, transform 500ms var(--expoOut) 100ms
+}
+
+.work[data-active=true] .info .title,
+.work[data-active=true] .info .desc {
+  transform: translateY(0%);
+  opacity: 1
+}
+
+.work .info .title h1 {
+  margin: 1rem 0
+}
+
+.work .rightside {
+  width: 100%;
+  display: block;
+  position: relative
+}
+
+.work[data-active=true] .list {
+  display: block;
+  overflow-y: auto;
+  height: 100%
+}
+
+.work .list .workpiece {
+  height: 600px;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative
+}
+
+.work .list .workpiece .image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: filter 200ms linear
+}
+
+.work .list .workpiece .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: opacity .1s linear;
+  opacity: 0
+}
+
+.work .list .workpiece .image:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 0
+}
+
+.work .list .workpiece .name {
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  position: relative;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 250ms linear;
+  user-select: none;
+  cursor: pointer;
+  text-transform: lowercase
+}
+
+.work .list .workpiece .name h1 {
+  margin: 0;
+  font-weight: 500;
+  max-width: 80%;
+  text-align: center
+}
+
+.work .list .workpiece:hover .name {
+  opacity: 1
+}
+
+.work .list .workpiece:hover .image {
+  filter: blur(2px) grayscale(80%) brightness(50%)
+}
+
+.work .rightside .preview[data-active=false] {
+  transform: translateY(-100%)
+}
+
+.work .rightside .preview[data-active=true] {
+  transform: translateY(0%)
+}
+
+.work .rightside .preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  overflow-y: auto;
+  display: block;
+  height: -webkit-fill-available;
+  transition: transform 375ms var(--expoOut)
+}
+
+.work .rightside .preview .prevbox {
+  display: block;
+  min-height: 100vh
+}
+
+.work .rightside .preview .prevbox .embed {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  max-height: 500px;
+  z-index: 10;
+  padding: 0 5rem;
+  opacity: 0;
+  transition: opacity 375ms ease 250ms
+}
+
+.work .rightside .preview[data-show=true] .prevbox .embed {
+  opacity: 1
+}
+
+.work .rightside .preview .prevbox .embed iframe {
+  height: inherit;
+  width: inherit;
+  border: none;
+  box-shadow: 0 4px 40px 0 rgba(0, 0, 0, .5)
+}
+
+.work .rightside .preview .prevbox .prevboximage {
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+  position: relative
+}
+
+.work .list .workpiece .image img.loaded,
+.work .rightside .preview .prevbox .prevboximage img.loaded {
+  opacity: 1
+}
+
+.work .rightside .preview .prevbox .prevboximage .gradient {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute
+}
+
+.work .rightside .preview .prevbox .prevboximage img {
+  width: 100%;
+  min-height: 600px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  transition: opacity 125ms ease;
+  opacity: 0
+}
+
+.work .rightside .preview .prevbox .prevboxinfo {
+  user-select: none;
+  padding: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  transition: transform 250ms var(--expoOut) 250ms, opacity 125ms linear 250ms;
+  transform: translateY(15%);
+  opacity: 0
+}
+
+.work .rightside .preview[data-show=true] .prevbox .prevboxinfo {
+  transform: translateY(0%);
+  opacity: 1
+}
+
+.work .rightside .preview .prevbox .prevboxinfo .text {
+  max-width: 50%
+}
+
+.work .rightside .preview .prevbox .prevboxinfo .text .abandon {
+  text-transform: uppercase;
+  padding: 2.5px 15px;
+  border: 1px solid #fff;
+  width: max-content;
+  margin-bottom: 2.5rem
+}
+
+.work .rightside .preview .prevbox .prevboxinfo .text .abandon p {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.15em;
+  margin: 0
+}
+
+.work .rightside .preview .prevbox .prevboxinfo .text h1 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 3em
+}
+
+.work .rightside .preview .prevbox .prevboxinfo .text p {
+  text-transform: lowercase;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 2;
+  font-family: monospace, ui-monospace
+}
+
+.work .rightside .preview .prevbox .prevboxinfo .button {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 7px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.5em;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  transition: opacity 125ms linear
+}
+
+.work .rightside .preview .prevbox .prevboxinfo .button p {
+  margin: 0
+}
+
+.work .rightside .preview .prevbox .prevboxinfo .button .arrow {
+  margin-left: 1rem;
+  height: 32px;
+  width: 32px;
+  position: relative;
+  overflow: hidden
+}
+
+.work .rightside .preview .prevbox .prevboxinfo .button:hover {
+  opacity: .6
+}
+
+.work .rightside .preview .prevbox .prevboxinfo .button:hover .arrow svg {
+  animation: buttonHoverRightArrowFallback 375ms var(--expoOut)
+}
+
+@keyframes buttonHoverRightArrowFallback {
+  from {
+    transform: translateX(0%)
+  }
+
+  49.99% {
+    transform: translateX(100%)
+  }
+
+  50.01% {
+    transform: translateX(-100%)
+  }
+
+  to {
+    transform: translateX(0%)
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .work .info .title {
+    font-size: 2em;
+  }
+
+  .work .info .desc {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .work .info {
+    display: none;
+  }
+
+  .work .rightside .preview .prevbox .prevboxinfo .text h1 {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .work .list .workpiece {
+    height: 512px;
+  }
+
+  .work .rightside .preview .prevbox .prevboximage img {
+    min-height: 384px;
+  }
+
+  .work .rightside .preview .prevbox .prevboxinfo {
+    padding: 5rem 2.5rem 10rem;
+  }
+
+  .work .rightside .preview .prevbox .embed {
+    padding: 0 1.25rem;
+    height: 300px;
+    top: 15%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .work .rightside .preview .prevbox .prevboxinfo {
+    flex-direction: column;
+  }
+
+  .work .list .workpiece {
+    height: 384px;
+  }
+
+  .work .rightside .preview .prevbox .prevboxinfo .text {
+    max-width: 90%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .work .list .workpiece .name {
+    font-size: 0.7em;
+  }
+}
