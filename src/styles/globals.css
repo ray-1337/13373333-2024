@@ -4,7 +4,7 @@ body {
   --bgstart1: 250, 250, 250;
   --bgend1: 245, 245, 245;
   background-color: linear-gradient(to bottom, transparent, rgb(var(--bgend1))) rgb(var(--bgstart1));
-  font-family: fira code, monospace, ui-monospace;
+  font-family: "Fira Code", monospace, ui-monospace !important;
   overflow: hidden
 }
 
