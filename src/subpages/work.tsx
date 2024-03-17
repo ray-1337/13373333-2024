@@ -9,6 +9,20 @@ import style from "@/styles/pages/subpages/work.module.css";
 
 const defaultHexIfProminentInvalid: string = "#121112";
 
+function shuffleArray<R>(array: Array<R>) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    let temp = array[i];
+    
+    array[i] = array[j];
+    array[j] = temp;
+  };
+
+  return array;
+};
+
+const shuffledWorksList = shuffleArray(WorksList);
+
 export default function Works(props?: { active: boolean }) {
   const [worksProminentColor, setWPC] = useSetState<Record<number, string>>({});
   const [workSelection, setWorkSelection] = useState<number | null>(null);
@@ -105,7 +119,7 @@ export default function Works(props?: { active: boolean }) {
                     const debouncedWorkSelection = workSelection !== null ? workSelection : (debouncedWorkSelectionForTransitionAfterClosing !== null ? debouncedWorkSelectionForTransitionAfterClosing : null);
                     if (debouncedWorkSelection === null) return;
 
-                    const work = WorksList[debouncedWorkSelection];
+                    const work = shuffledWorksList[debouncedWorkSelection];
 
                     const prominentedColor = worksProminentColor?.[debouncedWorkSelection] || defaultHexIfProminentInvalid;
 
@@ -140,7 +154,7 @@ export default function Works(props?: { active: boolean }) {
 
                         <div className={style.prevboximage}>
                           <img
-                            src={work.imageURL.startsWith("https") ? work.imageURL : "/images/workpiece/" + WorksList[debouncedWorkSelection].imageURL}
+                            src={work.imageURL.startsWith("https") ? work.imageURL : "/images/workpiece/" + shuffledWorksList[debouncedWorkSelection].imageURL}
                             loading={"eager"}
                             alt={`An image of a work named, "${work.name}"`}
                             onLoad={(evt) => evt.currentTarget.classList.add(style.loaded)}
@@ -191,7 +205,7 @@ export default function Works(props?: { active: boolean }) {
         {/* list of my workpieces */}
         <div className={style.list} ref={workListRef}>
           {
-            WorksList.map((work, index) => {
+            shuffledWorksList.map((work, index) => {
               return (
                 <div 
                   // @ts-expect-error
