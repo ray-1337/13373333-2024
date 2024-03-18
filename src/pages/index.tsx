@@ -1,5 +1,5 @@
 import { stripIndents, safeHtml } from "common-tags";
-import { useState, createContext } from "react";
+import { useState, createContext, useEffect } from "react";
 import { IconMail } from "@tabler/icons-react";
 import { useDebouncedValue } from "@mantine/hooks";
 import style from "@/styles/pages/index.module.css";
@@ -38,7 +38,7 @@ export default function Main() {
     // @ts-expect-error
     <SetSectionChosenContext.Provider value={setSectionChosen}>
       {/* main/frontpage */}
-      <section className={style.frontpage}>
+      <section className={style.frontpage} style={{overflow: sectionChosen !== null ? "hidden" : undefined}}>
         {/* frontpage section */}
         <section className={style.frontier}>
           {/* introduction section */}
