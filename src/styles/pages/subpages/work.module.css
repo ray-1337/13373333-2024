@@ -187,9 +187,9 @@
   height: 500px;
   max-height: 500px;
   z-index: 10;
-  padding: 0 5rem;
   opacity: 0;
-  transition: opacity 375ms ease 250ms
+  transition: opacity 375ms ease 250ms;
+  text-align: center;
 }
 
 .work .rightside .preview[data-show=true] .prevbox .embed {
@@ -198,7 +198,7 @@
 
 .work .rightside .preview .prevbox .embed iframe {
   height: inherit;
-  width: inherit;
+  width: 90%;
   border: none;
   box-shadow: 0 4px 40px 0 rgba(0, 0, 0, .5)
 }
@@ -370,9 +370,13 @@
   }
 
   .work .rightside .preview .prevbox .embed {
-    padding: 0 1.25rem;
+    /* padding: 0 1.25rem; */
     height: 300px;
     top: 15%;
+  }
+
+  .work .rightside .preview .prevbox .embed iframe {
+    width: 96%;
   }
 }
 
