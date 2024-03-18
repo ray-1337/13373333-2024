@@ -6,6 +6,7 @@ import { IconArrowRight, IconArrowLeft } from "@tabler/icons-react";
 import { SetSectionChosenContext } from "@/pages";
 import Scrollbar from 'smooth-scrollbar';
 import style from "@/styles/pages/subpages/work.module.css";
+import ScrollIndicator from "@/subpages/scroll";
 
 const defaultHexIfProminentInvalid: string = "#121112";
 
@@ -242,7 +243,9 @@ export default function Works(props?: { active: boolean }) {
             })
           }
         </div>
-        { }
+        
+        {/* scroll indicator */}
+        <ScrollIndicator active={windowWidth <= 992 && workListScrollHeight <= 100}/>
       </section>
     </section>
   );
