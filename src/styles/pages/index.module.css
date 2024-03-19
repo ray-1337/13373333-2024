@@ -5,6 +5,8 @@
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
+  z-index: 4;
+  position: relative;
 }
 
 .frontier {
@@ -33,7 +35,8 @@
   letter-spacing: -.1px;
   font-size: 13px;
   font-weight: 400;
-  font-optical-sizing: auto
+  font-optical-sizing: auto;
+  cursor: default;
 }
 
 .frontier .intro .clickable {
@@ -85,6 +88,49 @@
 .rectangle[data-transition-woop=false] {
   transition: transform 1s var(--expoOut);
   transform: scale(1)
+}
+
+.content-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  filter: blur(25px) brightness(50%);
+  transform: scale(1.15);
+  transition: opacity 250ms ease 50ms, background-color 1s ease;
+  opacity: 0;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.content-hover[data-active=true] {
+  opacity: 1;
+  background-color: #121112;
+}
+
+.content-hover video,.content-hover-rectangle video {
+  width: inherit;
+  height: inherit;
+  object-fit: cover
+}
+
+.content-hover-rectangle {
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  user-select: none;
+  transform: scale(.9);
+  opacity: 0;
+  transition: opacity 100ms linear, transform 100ms var(--expoIn);
+}
+
+.content-hover-rectangle[data-active=true] {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 250ms ease 25ms, transform 1s var(--expoOut) 50ms;
 }
 
 @media only screen and (max-width: 1600px) {

@@ -1,18 +1,11 @@
 import { stripIndents, safeHtml } from "common-tags";
-import { useState, createContext, useEffect } from "react";
+import { useState, createContext, Fragment } from "react";
 import { IconMail } from "@tabler/icons-react";
 import { useDebouncedValue } from "@mantine/hooks";
 import style from "@/styles/pages/index.module.css";
 
 // work pieces
 import WorkPieces from "@/subpages/work";
-
-// introduction
-const introduction: string = stripIndents(`
-  i am an independent full-stack developer.
-
-  i am currently focusing on mastering video editing and animation.
-`);
 
 // clickable
 const clickableList: Array<Record<"name" | "value", string> & { isURL?: boolean }> = [
@@ -34,20 +27,54 @@ export default function Main() {
   const [quickerDebouncedSectionChosenForProps] = useDebouncedValue(sectionChosen, 500);
   const [debouncedSectionChosenForProps] = useDebouncedValue(sectionChosen, 900);
 
+  const ContentHoverEasterEgg = (props: { content: string, index: number }) => {
+    return (
+      <u>
+        <b onPointerLeave={() => setContentHoverIndex(null)} onPointerEnter={() => setContentHoverIndex(props.index)}>{props.content}</b>
+      </u>
+    );
+  };
+
+  const [contentHoverIndex, setContentHoverIndex] = useState<number | null>(null);
+
+  const ContentHoverFiller = (props: { index: number | null }) => {
+    const redirectToMyCDN = (str: string) => {
+      return process.env.NODE_ENV === "production" ? "https://itchi.2024.13373333.one" + str : str;
+    };
+
+    return (
+      <video autoPlay playsInline disablePictureInPicture disableRemotePlayback loop muted controls={false} preload={"auto"}>
+        {/* i do games and shit */}
+        { props.index === 1 && <source src={redirectToMyCDN("/videos/frontpage/idogames.480p_wide.reduced.mp4")} type="video/mp4"/> }
+      </video>
+    );
+  };
+
   return (
     // @ts-expect-error
-    <SetSectionChosenContext.Provider value={setSectionChosen}>
+    <SetSectionChosenContext.Provider value={setSectionChosen}> 
+      {/* content hover background */}
+      <section className={style["content-hover"]} data-active={sectionChosen === null && contentHoverIndex !== null}>
+        <ContentHoverFiller index={contentHoverIndex} />
+      </section>
+
       {/* main/frontpage */}
       <section className={style.frontpage} style={{overflow: sectionChosen !== null ? "hidden" : undefined}}>
         {/* frontpage section */}
         <section className={style.frontier}>
           {/* introduction section */}
-          <div className={style.intro}>
-            <div className={style.skrillex}> { /* running out of classname */ }
+          <div className={style.intro} style={{filter: contentHoverIndex !== null ? `invert(1)` : undefined}}>
+            <div className={style.skrillex}> { /* running out of classname */}
               <div className={style.text}>
-                <p dangerouslySetInnerHTML={{
-                  __html: safeHtml(`hi. i am <b>ray</b>. ` + introduction.split(/[\r\n]/gim).join("<br/>"))
-                }} />
+                <p>
+                  hi. i am <b>ray</b>. <br /><br />
+
+                  i am an independent full-stack developer. <br /><br />
+
+                  i am currently focusing on mastering video editing and animation. <br /><br />
+
+                  and, i also do <ContentHoverEasterEgg content={"play games"} index={1}/>, sometimes.
+                </p>
               </div>
 
               {/* clickable stuff */}
@@ -93,11 +120,11 @@ export default function Main() {
           </div>
 
           {/* empty rectangle section */}
-          <div
-            className={style.rectangle}
-            data-transition-woop={sectionChosen !== null ? sectionChosen !== null : quickerDebouncedSectionChosenForProps !== null}
-            // data-transition-hidden={sectionChosen !== null ? debouncedSectionChosenForProps !== null : debouncedSectionChosen !== null}
-          />
+          <div className={style.rectangle} data-transition-woop={sectionChosen !== null ? sectionChosen !== null : quickerDebouncedSectionChosenForProps !== null}>
+            <div className={style["content-hover-rectangle"]} data-active={sectionChosen === null && contentHoverIndex !== null}>
+              <ContentHoverFiller index={contentHoverIndex} />
+            </div>
+          </div>
         </section>
       </section>
 
