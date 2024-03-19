@@ -10,6 +10,7 @@ const cspHeader = stripIndents(`
   style-src 'self' https://fonts.googleapis.com/css2 https://${cdnEndpoint} 'unsafe-inline' ${!isProd ? "'unsafe-eval'" : ""};
   img-src 'self' https://${cdnEndpoint} https://cdn.simpleicons.org https://i.ytimg.com/vi/;
   font-src 'self' https://fonts.gstatic.com/s/ https://${cdnEndpoint};
+  media-src 'self' https://${cdnEndpoint};
   object-src 'none';
   base-uri 'self';
   form-action 'self';
