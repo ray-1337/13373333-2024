@@ -5,7 +5,9 @@ body {
   --bgend1: 245, 245, 245;
   background-color: linear-gradient(to bottom, transparent, rgb(var(--bgend1))) rgb(var(--bgstart1));
   font-family: "Fira Code", monospace, ui-monospace !important;
-  overflow: hidden
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 :root {
