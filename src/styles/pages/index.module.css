@@ -156,6 +156,10 @@
 }
 
 @media only screen and (max-width: 800px) {
+  .content-hover, .content-hover-rectangle {
+    display: none;
+  }
+
   .frontier {
     flex-direction: column;
     padding: 3.75rem 0;
