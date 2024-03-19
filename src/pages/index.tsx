@@ -1,4 +1,4 @@
-import { useState, createContext } from "react";
+import { useState, createContext, useEffect } from "react";
 import { IconMail } from "@tabler/icons-react";
 import { useDebouncedValue, useViewportSize } from "@mantine/hooks";
 import style from "@/styles/pages/index.module.css";
@@ -50,6 +50,10 @@ export default function Main() {
       </video>
     );
   };
+
+  useEffect(() => {
+    setContentHoverIndex(null);
+  }, [sectionChosen])
 
   return (
     // @ts-expect-error
