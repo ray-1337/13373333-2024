@@ -39,6 +39,8 @@ export default function Works(props?: { active: boolean }) {
 
   const {width: windowWidth} = useViewportSize();
 
+  const cdnEndpoint = process.env.NODE_ENV === "production" ? "https://itchi.2024.13373333.one" : "";
+
   useEffect(() => {
     workPieceContainerRefs.current.forEach((container, index) => {
       const getParallaxScale = (scrollHeight: number, elementTop: number, nextElementHeight: number, maxScale: number) => {
@@ -155,7 +157,7 @@ export default function Works(props?: { active: boolean }) {
 
                         <div className={style.prevboximage}>
                           <img
-                            src={work.imageURL.startsWith("https") ? work.imageURL : "/images/workpiece/" + shuffledWorksList[debouncedWorkSelection].imageURL}
+                            src={work.imageURL.startsWith("https") ? work.imageURL : cdnEndpoint + "/images/workpiece/" + shuffledWorksList[debouncedWorkSelection].imageURL}
                             loading={"eager"}
                             alt={`An image of a work named, "${work.name}"`}
                             onLoad={(evt) => evt.currentTarget.classList.add(style.loaded)}
@@ -222,7 +224,7 @@ export default function Works(props?: { active: boolean }) {
                       // @ts-expect-error
                       ref={(el) => workPieceImagesRefs.current[index] = el}
 
-                      src={work.imageURL.startsWith("https") ? work.imageURL : "/images/workpiece/" + work.imageURL}
+                      src={work.imageURL.startsWith("https") ? work.imageURL : cdnEndpoint + "/images/workpiece/" + work.imageURL}
                       loading={"lazy"}
                       alt={`An image of a work named, "${work.name}"`}
                       onLoad={async (event) => {
