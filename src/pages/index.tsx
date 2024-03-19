@@ -1,7 +1,6 @@
-import { stripIndents, safeHtml } from "common-tags";
-import { useState, createContext, Fragment } from "react";
+import { useState, createContext } from "react";
 import { IconMail } from "@tabler/icons-react";
-import { useDebouncedValue } from "@mantine/hooks";
+import { useDebouncedValue, useViewportSize } from "@mantine/hooks";
 import style from "@/styles/pages/index.module.css";
 
 // work pieces
@@ -27,10 +26,12 @@ export default function Main() {
   const [quickerDebouncedSectionChosenForProps] = useDebouncedValue(sectionChosen, 500);
   const [debouncedSectionChosenForProps] = useDebouncedValue(sectionChosen, 900);
 
+  const {width: windowWidth} = useViewportSize();
+
   const ContentHoverEasterEgg = (props: { content: string, index: number }) => {
     return (
       <u>
-        <b onPointerLeave={() => setContentHoverIndex(null)} onPointerEnter={() => setContentHoverIndex(props.index)}>{props.content}</b>
+        <b onPointerLeave={() => setContentHoverIndex(null)} onPointerEnter={() => windowWidth > 800 ? setContentHoverIndex(props.index) : undefined}>{props.content}</b>
       </u>
     );
   };
