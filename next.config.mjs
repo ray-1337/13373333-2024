@@ -37,7 +37,7 @@ const nextConfig = {
   images: {
     loader: isProd ? "custom" : "default",
     domains: isProd ? [cdnEndpoint] : undefined,
-    unoptimized: isProd ? undefined : true
+    unoptimized: true // isProd ? undefined : true
   },
 
   async headers() {
