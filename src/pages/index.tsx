@@ -31,7 +31,7 @@ export default function Main() {
   const ContentHoverEasterEgg = (props: { content: string, index: number }) => {
     return (
       <u>
-        <b onPointerLeave={() => setContentHoverIndex(null)} onPointerEnter={() => windowWidth > 800 ? setContentHoverIndex(props.index) : undefined}>{props.content}</b>
+        <b style={{cursor: "default"}} onPointerLeave={() => setContentHoverIndex(null)} onPointerEnter={() => windowWidth > 800 ? setContentHoverIndex(props.index) : undefined}>{props.content}</b>
       </u>
     );
   };
