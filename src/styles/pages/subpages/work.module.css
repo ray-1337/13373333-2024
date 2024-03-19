@@ -7,7 +7,8 @@
   max-height: 100vh;
   flex-direction: row;
   width: 100%;
-  transition: opacity 125ms linear
+  transition: opacity 125ms linear;
+  z-index: 15;
 }
 
 .work[data-active=false] {
