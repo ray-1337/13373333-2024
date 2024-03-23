@@ -83,7 +83,8 @@ export default [
     name: "Anti-NSFW",
     imageURL: "antinsfw.webp",
     url: "https://docs.cdev.shop/anti-nsfw/grand-mirage",
-    description: "A Discord bot that can detect NSFW content through machine learning."
+    description: "A Discord bot that can detect NSFW content through machine learning.",
+    embedURL: "https://www.youtube-nocookie.com/embed/nmPzkVfQLAM?rel=0"
   },
   {
     name: "GMDI Discord Bot",
