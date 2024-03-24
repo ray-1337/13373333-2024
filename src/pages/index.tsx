@@ -2,6 +2,7 @@ import { useState, createContext, useEffect } from "react";
 import { IconMail } from "@tabler/icons-react";
 import { useDebouncedValue, useViewportSize } from "@mantine/hooks";
 import style from "@/styles/pages/index.module.css";
+import hoverStyle from "@/styles/animations/frontpageHoverBlackHole.module.css"
 
 // work pieces
 import WorkPieces from "@/subpages/work";
@@ -21,6 +22,7 @@ const sosmedList: Array<{ icon: string | typeof IconMail, url: string }> = [
 export const SetSectionChosenContext = createContext(null);
 
 export default function Main() {
+  const [sectionHovered, setSectionHovered] = useState<number | null>(null);
   const [sectionChosen, setSectionChosen] = useState<string | null>(null);
   const [debouncedSectionChosen] = useDebouncedValue(sectionChosen, 850);
   const [quickerDebouncedSectionChosenForProps] = useDebouncedValue(sectionChosen, 500);
@@ -53,6 +55,7 @@ export default function Main() {
 
   useEffect(() => {
     setContentHoverIndex(null);
+    setSectionHovered(null);
   }, [sectionChosen])
 
   return (
@@ -87,7 +90,7 @@ export default function Main() {
                 {
                   clickableList.map((val, index) => {
                     return (
-                      <span onClick={() => !val?.isURL ? setSectionChosen(val.value) : undefined} key={index} data-hoverable-effect-1={true}>
+                      <span onMouseEnter={() => setSectionHovered(index)} onMouseLeave={() => setSectionHovered(null)} onClick={() => !val?.isURL ? setSectionChosen(val.value) : undefined} key={index} data-hoverable-effect-1={true}>
                         <u>
                           {/* if its url, use "anchor instead" */}
                           {val?.isURL && <a href={val.value}>{val.name}</a>}
@@ -129,6 +132,9 @@ export default function Main() {
             <div className={style["content-hover-rectangle"]} data-active={sectionChosen === null && contentHoverIndex !== null}>
               <ContentHoverFiller index={contentHoverIndex} />
             </div>
+
+            {/* a special transition when you're hovering "work" page/section */}
+            <div className={hoverStyle["transition-section-1"]} data-active={sectionHovered === 0}/>
           </div>
         </section>
       </section>

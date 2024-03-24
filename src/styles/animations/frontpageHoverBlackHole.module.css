@@ -1,0 +1,33 @@
+.transition-section-1:before,
+.transition-section-1:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+  transition: height 1s var(--expoOut), opacity 125ms linear;
+  height: 0;
+  opacity: 0;
+}
+
+.transition-section-1:before {
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+}
+
+.transition-section-1:after {
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.transition-section-1[data-active="true"]:before,
+.transition-section-1[data-active="true"]:after {
+  opacity: 0.5;
+}
+
+.transition-section-1[data-active="true"]:before {
+  height: 75%;
+}
+
+.transition-section-1[data-active="true"]:after {
+  height: 30%;
+}
