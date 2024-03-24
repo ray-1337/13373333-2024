@@ -300,7 +300,8 @@
 }
 
 .work .rightside .preview .prevbox .prevboxinfo .button p {
-  margin: 0
+  margin: 0;
+  transition: transform 250ms var(--expoOut);
 }
 
 .work .rightside .preview .prevbox .prevboxinfo .button .arrow {
@@ -313,6 +314,10 @@
 
 .work .rightside .preview .prevbox .prevboxinfo .button:hover {
   opacity: .6
+}
+
+.work .rightside .preview .prevbox .prevboxinfo .button:hover p {
+  transform: skew(-7.5deg);
 }
 
 .work .rightside .preview .prevbox .prevboxinfo .button:hover .arrow svg {
