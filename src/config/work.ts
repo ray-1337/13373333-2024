@@ -14,7 +14,8 @@ export default [
     imageURL: "cdevdash.webp",
     url: "https://dash.cdev.shop/demo",
     description: "A Discord bot dashboard for cDev (Community Development), created with Next.js from scratch.",
-    type: "website"
+    type: "website",
+    embedURL: "https://www.youtube-nocookie.com/embed/DQJ8P9kgkwk?rel=0"
   },
   {
     name: "ItchiHuskii's Personal Website",
