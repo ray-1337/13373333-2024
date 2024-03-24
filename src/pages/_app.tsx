@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
 
       <MantineProvider>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </MantineProvider>
     </Fragment>
   );
