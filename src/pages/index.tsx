@@ -134,7 +134,7 @@ export default function Main() {
             </div>
 
             {/* a special transition when you're hovering "work" page/section */}
-            <div className={hoverStyle["transition-section-1"]} data-active={sectionHovered === 0}/>
+            <div className={hoverStyle["transition-section-1"]} data-active={contentHoverIndex === null && sectionHovered === 0}/>
           </div>
         </section>
       </section>
