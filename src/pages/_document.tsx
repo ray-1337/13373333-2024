@@ -4,8 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      
-      <title>ray [2024 edition]</title>
 
       {
         process.env.NODE_ENV === "development" && (
