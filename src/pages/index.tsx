@@ -28,6 +28,9 @@ export default function Main() {
   const [quickerDebouncedSectionChosenForProps] = useDebouncedValue(sectionChosen, 500);
   const [debouncedSectionChosenForProps] = useDebouncedValue(sectionChosen, 900);
 
+  // biotext transition (eugh)
+  const [bioTextState, setBioTextNumberState] = useState<number>(0);
+
   const {width: windowWidth} = useViewportSize();
 
   const ContentHoverEasterEgg = (props: { content: string, index: number }) => {
@@ -56,7 +59,27 @@ export default function Main() {
   useEffect(() => {
     setContentHoverIndex(null);
     setSectionHovered(null);
-  }, [sectionChosen])
+  }, [sectionChosen]);
+
+  const biography: JSX.Element[] = [
+    <>hi. i am <b>ray</b>. 👋</>,
+    <>i am an independent full-stack developer</>,
+    <>i am currently focusing on mastering video editing and animation.</>,
+    <>and, i also do <ContentHoverEasterEgg content={"play games"} index={1}/>, sometimes.</>,
+  ];
+
+  useEffect(() => {
+    setTimeout(() => {
+      const delayShowanceMultiplier: number = 125;
+
+      for (let index = 0; index < biography.length; index++) {
+        setTimeout(() => {
+          setBioTextNumberState((current) => current + 1);
+        }, delayShowanceMultiplier * (index + 1));
+      };
+
+    }, 500);
+  }, []);
 
   return (
     // @ts-expect-error
@@ -75,13 +98,23 @@ export default function Main() {
             <div className={style.skrillex}> { /* running out of classname */}
               <div className={style.text}>
                 <p>
-                  hi. i am <b>ray</b>. <br /><br />
+                  {
+                    biography.map((bio, index) => {
+                      return (
+                        <span className={style["biotext-root"]} data-show={bioTextState >= (index + 1)}>
+                          <span className={style["biotext"]} key={index}>
+                            {bio}
 
-                  i am an independent full-stack developer. <br /><br />
-
-                  i am currently focusing on mastering video editing and animation. <br /><br />
-
-                  and, i also do <ContentHoverEasterEgg content={"play games"} index={1}/>, sometimes.
+                            {
+                              (biography.length - 1) !== index && (
+                                <> <br/><br/> </>
+                              )
+                            }
+                          </span>
+                        </span>
+                      );
+                    })
+                  }
                 </p>
               </div>
 

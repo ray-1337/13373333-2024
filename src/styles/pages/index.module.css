@@ -132,6 +132,24 @@
   transition: opacity 250ms ease 25ms, transform 1s var(--expoOut) 50ms;
 }
 
+.biotext-root {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.biotext {
+  display: inline-block;
+  transform: translate3d(0, 25px, 0px) skew(0deg, 5deg);
+  transition: transform 1s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 125ms linear;
+  opacity: 0;
+}
+
+.biotext-root[data-show="true"] .biotext {
+  transform: translate3d(0, 0, 0) skew(0, 0);
+  opacity: 1;
+}
+
 @media only screen and (max-width: 1600px) {
   .frontier {
     width: 75%;
