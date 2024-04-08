@@ -117,6 +117,7 @@ export default [
     imageURL: "valoedit.animated.webp",
     url: "https://www.youtube.com/playlist?list=PLGd05QsjGyxXeT6iFz9w4QaJA2d8L_YyF",
     description: "A compilation of VALORANT funny moments edit. Inspired by Jolidofc, edited on Sony Vegas.",
+    embedURL: "https://www.youtube-nocookie.com/embed/videoseries?list=PLYrHu4ar33mX9Q32QHk90SoGmZTVovVSI&rel=0"
   },
   {
     name: "IRE (03.12.2021)",
