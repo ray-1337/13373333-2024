@@ -22,6 +22,8 @@ const sosmedList: Array<{ icon: string | typeof IconMail, url: string }> = [
 export const SetSectionChosenContext = createContext(null);
 
 export default function Main() {
+  const [rootShow, setRootShow] = useState<boolean>(false);
+
   const [sectionHovered, setSectionHovered] = useState<number | null>(null);
   const [sectionChosen, setSectionChosen] = useState<string | null>(null);
   const [debouncedSectionChosen] = useDebouncedValue(sectionChosen, 850);
@@ -78,6 +80,7 @@ export default function Main() {
         }, delayShowanceMultiplier * (index + 1));
       };
 
+      setRootShow(true);
     }, 500);
   }, []);
 
@@ -90,7 +93,7 @@ export default function Main() {
       </section>
 
       {/* main/frontpage */}
-      <section className={style.frontpage} style={{overflow: sectionChosen !== null ? "hidden" : undefined}}>
+      <section className={style.frontpage} style={{overflow: sectionChosen !== null ? "hidden" : undefined}} data-show={rootShow}>
         {/* frontpage section */}
         <section className={style.frontier}>
           {/* introduction section */}

@@ -7,6 +7,12 @@
   overflow-x: hidden;
   z-index: 4;
   position: relative;
+  transition: opacity 500ms linear;
+  opacity: 0;
+}
+
+.frontpage[data-show="true"] {
+  opacity: 1;
 }
 
 .frontier {
