@@ -104,8 +104,8 @@ export default function Main() {
                   {
                     biography.map((bio, index) => {
                       return (
-                        <span className={style["biotext-root"]} data-show={bioTextState >= (index + 1)}>
-                          <span className={style["biotext"]} key={index}>
+                        <span className={style["biotext-root"]} data-show={bioTextState >= (index + 1)} key={index}>
+                          <span className={style["biotext"]}>
                             {bio}
 
                             {
