@@ -17,6 +17,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>ray [2024 edition]</title>
 
+        <link rel="shortcut icon" href="/favicon.ico" />
+
         <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, shrink-to-fit=no, initial-scale=1.0" />
       </Head>
 
