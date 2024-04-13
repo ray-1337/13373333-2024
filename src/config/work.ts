@@ -115,7 +115,7 @@ export default [
   {
     name: "VALORANT Funny Moment Edits",
     imageURL: "valoedit.animated.webp",
-    url: "https://www.youtube.com/playlist?list=PLGd05QsjGyxXeT6iFz9w4QaJA2d8L_YyF",
+    url: "https://www.youtube.com/playlist?list=PLYrHu4ar33mX9Q32QHk90SoGmZTVovVSI",
     description: "A compilation of VALORANT funny moments edit. Inspired by Jolidofc, edited on Sony Vegas.",
     embedURL: "https://www.youtube-nocookie.com/embed/videoseries?list=PLYrHu4ar33mX9Q32QHk90SoGmZTVovVSI&rel=0"
   },
