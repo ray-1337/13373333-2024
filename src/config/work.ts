@@ -130,6 +130,7 @@ export default [
     url: "https://docs.cdev.shop/anti-nsfw/grand-mirage",
     description: "A Discord bot that can detect NSFW content through machine learning.",
     embedURL: "https://www.youtube-nocookie.com/embed/nmPzkVfQLAM?rel=0",
+    snapshotURLs: ["antinsfw/snapshot/1.webp", "antinsfw/snapshot/2.webp"],
     credits: {
       "Host provided by": {
         name: "Jpuf",
