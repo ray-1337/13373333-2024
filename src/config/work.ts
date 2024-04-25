@@ -6,6 +6,9 @@ type WorkProp = Record<"name" | "description" | "url" | "imageURL", string> & {
   abandonedType?: AbandonType
   embedURL?: string;
   type: WorkType;
+
+  // mama mia
+  credits?: Record<string, string | string[] | Record<"name" | "url", string> | Array<Record<"name" | "url", string>>>;
 };
 
 export default [
@@ -15,21 +18,39 @@ export default [
     url: "https://dash.cdev.shop/demo",
     description: "A Discord bot dashboard for cDev (Community Development), created with Next.js from scratch.",
     type: "website",
-    embedURL: "https://www.youtube-nocookie.com/embed/DQJ8P9kgkwk?rel=0"
+    embedURL: "https://www.youtube-nocookie.com/embed/DQJ8P9kgkwk?rel=0",
+    credits: {
+      "Idea proposed by": {
+        name: "Newton",
+        url: "https://github.com/Newtonzz"
+      }
+    }
   },
   {
     name: "ItchiHuskii's Personal Website",
     imageURL: "itchi.webp",
     description: "Best friend's personal website.",
     abandonedType: "Under Construction",
-    type: "website"
+    type: "website",
+    credits: {
+      "Idea proposed by": {
+        name: "Itchi Husky",
+        url: "https://www.instagram.com/itchi.huskii/"
+      }
+    }
   },
   {
     name: "Nusantara Furry Convention: Hidden Wonderland",
     imageURL: "nufc_2024.webp",
     description: "An upcoming furry convention gathering, which will take place in South Jakarta, Indonesia.",
     url: "https://nusantarafurcon.com",
-    type: "website"
+    type: "website",
+    credits: {
+      "Client": {
+        name: "Nusantara Furry Convention",
+        url: "https://instagram.com/nusa_furcon"
+      }
+    }
   },
   {
     name: "Personal Project Authorization",
@@ -48,6 +69,12 @@ export default [
     imageURL: "cdev.webp",
     url: "https://cdev.shop",
     description: "My first remotely startup project to advance limitations around Discord and FiveM communities.",
+    credits: {
+      "Idea proposed by": {
+        name: "Newton",
+        url: "https://github.com/Newtonzz"
+      }
+    }
   },
   {
     name: "YouTube Discord Embed",
@@ -85,7 +112,13 @@ export default [
     imageURL: "antinsfw.webp",
     url: "https://docs.cdev.shop/anti-nsfw/grand-mirage",
     description: "A Discord bot that can detect NSFW content through machine learning.",
-    embedURL: "https://www.youtube-nocookie.com/embed/nmPzkVfQLAM?rel=0"
+    embedURL: "https://www.youtube-nocookie.com/embed/nmPzkVfQLAM?rel=0",
+    credits: {
+      "Host provided by": {
+        name: "Jpuf",
+        url: "https://github.com/Jpuf0"
+      }
+    }
   },
   {
     name: "GMDI Discord Bot",

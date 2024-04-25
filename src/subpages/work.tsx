@@ -7,6 +7,7 @@ import { SetSectionChosenContext } from "@/pages";
 import Scrollbar from 'smooth-scrollbar';
 import style from "@/styles/pages/subpages/work.module.css";
 import ScrollIndicator from "@/subpages/scroll";
+import Link from "next/link";
 
 const defaultHexIfProminentInvalid: string = "#121112";
 
@@ -196,6 +197,51 @@ export default function Works(props?: { active: boolean }) {
                             )
                           }
                         </div>
+
+                        {/* credits */}
+                        {
+                          typeof work?.credits !== "undefined" && (
+                            <div className={style["prevbox-credits"]}>
+                              {
+                                Object.entries(work.credits).map((credit, index) => {
+                                  const [name, value] = credit;
+
+                                  return (
+                                    <div className={style["prevbox-credits-individual"]} key={"credits-" + index}>
+                                      <h4>{name}</h4>
+
+                                      {
+                                        (typeof value === "string") && (
+                                          <p>{value}</p>
+                                        )
+                                      }
+
+                                      {
+                                        (value instanceof Object && !Array.isArray(value)) && (
+                                          <Link href={value.url} target={"_blank"}>{value.name}</Link>
+                                        )
+                                      }
+
+                                      {
+                                        (Array.isArray(value)) && value.map((creditor, creditorIndex) => {
+                                          if (typeof creditor === "string") {
+                                            return (
+                                              <p key={creditorIndex}>{creditor}</p>
+                                            );
+                                          };
+
+                                          return (
+                                            <Link href={creditor.url} target={"_blank"}>{creditor.name}</Link>
+                                          );
+                                        }).join(", ")
+                                      }
+                                    </div>
+                                  );
+                                })
+                              }
+                            </div>
+                          )
+                        }
                       </section>
                     )
                   })()
