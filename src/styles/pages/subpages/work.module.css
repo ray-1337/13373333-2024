@@ -381,6 +381,41 @@
   filter: grayscale(0);
 }
 
+.image-preview {
+  background: rgb(0 0 0 / 90%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 69420;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-preview-insider {
+  left: 0;
+  top: 0;
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+.image-preview-insider img {
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 125ms linear;
+  max-width: 100%;
+  height: auto;
+  max-height: 768px;
+}
+
+.image-preview-insider img.loaded {
+  opacity: 1;
+}
+
 @media only screen and (max-width: 600px) {
   .project-snapshots-individual-image-container {
       padding: 2rem 0.5rem;

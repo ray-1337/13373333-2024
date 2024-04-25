@@ -39,6 +39,8 @@ export default function Works(props?: { active: boolean }) {
   const workPieceContainerRefs = useRef<HTMLDivElement[]>([]);
   const workPieceImagesRefs = useRef<HTMLDivElement[]>([]);
 
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
+
   const {width: windowWidth} = useViewportSize();
 
   const cdnEndpoint = process.env.NODE_ENV === "production" ? "https://itchi.2024.13373333.one" : "";
@@ -96,6 +98,21 @@ export default function Works(props?: { active: boolean }) {
 
   return (
     <section className={style.work} data-active={props?.active || false}>
+      {/* image preview */}
+      {
+        typeof imagePreview === "string" && (
+          <section className={style["image-preview"]}>
+            <div className={style.close_button}>
+              <IconArrowLeft color={"white"} size={64} strokeWidth={1.125} onClick={() => setImagePreview(null)} />
+            </div>
+
+            <div className={style["image-preview-insider"]}>
+              <img alt={"Image preview"} src={imagePreview} loading={"lazy"} onLoad={(event) => event.currentTarget.classList.add(style.loaded)}/>
+            </div>
+          </section>
+        )
+      }
+
       <div className={style.close_button}>
         {/* @ts-expect-error */}
         <IconArrowLeft color={"white"} size={64} strokeWidth={1.125} onClick={() => resetMenu(null)} />
@@ -253,7 +270,7 @@ export default function Works(props?: { active: boolean }) {
                                   const imageURL = work.imageURL.startsWith("https") ? work.imageURL : cdnEndpoint + "/images/workpiece/" + snapshot;
 
                                   return (
-                                    <Grid.Col span={windowWidth <= 768 ? 12 : 6} className={style["project-snapshots-individual"]} key={index} onClick={() => window.open(imageURL, "_blank")}>
+                                    <Grid.Col span={windowWidth <= 768 ? 12 : 6} className={style["project-snapshots-individual"]} key={index} onClick={() => setImagePreview(imageURL)}>
                                       <div className={style["project-snapshots-individual-image-container"]}>
                                         <img src={imageURL} alt={`A snapshot of a project named ${work.name}, category ${index}`} loading={"lazy"}/>
                                       </div>
