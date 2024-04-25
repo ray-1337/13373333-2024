@@ -48,6 +48,7 @@ export default [
     description: "An upcoming furry convention gathering, which will take place in South Jakarta, Indonesia.",
     url: "https://nusantarafurcon.com",
     type: "website",
+    abandonedType: "Discontinued",
     credits: {
       "Client": {
         name: "Nusantara Furry Convention",
