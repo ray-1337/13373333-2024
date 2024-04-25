@@ -90,6 +90,8 @@ export default [
     name: "YouTube Discord Embed",
     imageURL: "yde.webp",
     url: "https://github.com/ray-1337/youtube-discord-embed",
+    description: "Embed YouTube video on Discord, inspired by FixTweet.",
+    snapshotURLs: ["yde/snapshot/1.webp"],
     credits: {
       "Hosted on": {
         "name": "Vercel",
