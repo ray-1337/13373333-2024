@@ -249,9 +249,12 @@ export default function Works(props?: { active: boolean }) {
                                           };
 
                                           return (
-                                            <Link href={creditor.url} target={"_blank"}>{creditor.name}</Link>
+                                            <>
+                                              <Link href={creditor.url} target={"_blank"}>{creditor.name}</Link>
+                                              {value.length === creditorIndex + 1 ? "" : ", "}
+                                            </>
                                           );
-                                        }).join(", ")
+                                        })
                                       }
                                     </div>
                                   );
