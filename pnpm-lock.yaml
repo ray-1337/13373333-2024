@@ -9,20 +9,20 @@ importers:
   .:
     dependencies:
       '@mantine/core':
-        specifier: ^7.7.1
-        version: 7.7.1(@mantine/hooks@7.7.1)(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0)
+        specifier: ^7.8.1
+        version: 7.8.1(@mantine/hooks@7.8.1(react@18.2.0))(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@mantine/hooks':
-        specifier: ^7.7.1
-        version: 7.7.1(react@18.2.0)
+        specifier: ^7.8.1
+        version: 7.8.1(react@18.2.0)
       '@tabler/icons-react':
-        specifier: ^3.1.0
-        version: 3.1.0(react@18.2.0)
+        specifier: ^3.2.0
+        version: 3.2.0(react@18.2.0)
       common-tags:
         specifier: ^1.8.2
         version: 1.8.2
       next:
         specifier: 14.1.3
-        version: 14.1.3(react-dom@18.2.0)(react@18.2.0)
+        version: 14.1.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       node-vibrant:
         specifier: 3.1.6
         version: 3.1.6
@@ -43,23 +43,23 @@ importers:
         specifier: ^1.8.4
         version: 1.8.4
       '@types/node':
-        specifier: ^20.12.5
-        version: 20.12.5
+        specifier: ^20.12.7
+        version: 20.12.7
       '@types/react':
-        specifier: ^18.2.74
-        version: 18.2.74
+        specifier: ^18.2.79
+        version: 18.2.79
       '@types/react-dom':
-        specifier: ^18.2.24
-        version: 18.2.24
+        specifier: ^18.2.25
+        version: 18.2.25
       eslint:
         specifier: ^8
         version: 8.57.0
       eslint-config-next:
         specifier: 14.1.3
-        version: 14.1.3(eslint@8.57.0)(typescript@5.4.4)
+        version: 14.1.3(eslint@8.57.0)(typescript@5.4.5)
       typescript:
-        specifier: ^5.4.4
-        version: 5.4.4
+        specifier: ^5.4.5
+        version: 5.4.5
 
 packages:
 
@@ -169,15 +169,15 @@ packages:
   '@jimp/utils@0.16.13':
     resolution: {integrity: sha512-VyCpkZzFTHXtKgVO35iKN0sYR10psGpV6SkcSeV4oF7eSYlR8Bl6aQLCzVeFjvESF7mxTmIiI3/XrMobVrtxDA==}
 
-  '@mantine/core@7.7.1':
-    resolution: {integrity: sha512-SdPzjvqvEK7uHFuVD3a8w3OZyQVoCwIXLSUfOtRNouDMQgsq6Ac7QjKXBBOk3wNweOWFVOU1vATLHobSmow0lQ==}
+  '@mantine/core@7.8.1':
+    resolution: {integrity: sha512-dttbP2BhBzFJYBqgAQedJRca5+MXlJbppRhRsufnFeO7YC/UpZutOoHQ9dxGEQnhAWJ/d+wuRvYWG/gXex+wYQ==}
     peerDependencies:
-      '@mantine/hooks': 7.7.1
+      '@mantine/hooks': 7.8.1
       react: ^18.2.0
       react-dom: ^18.2.0
 
-  '@mantine/hooks@7.7.1':
-    resolution: {integrity: sha512-3YH2FzKMlg840tb04PBDcDXyBCi9puFOxEBVgc6Y/pN6KFqfOoAnQE/YvgOtwSNXZlbTWyDlQoYj+3je7pA7og==}
+  '@mantine/hooks@7.8.1':
+    resolution: {integrity: sha512-zCLqnxTUR2N6Awbt4rv/26UKTc75dXTVmCPsWUb6wdQExuC28fucG6kMoNYHVmOBDq9f3KP9zWOGDelHM2ogZA==}
     peerDependencies:
       react: ^18.2.0
 
@@ -263,13 +263,13 @@ packages:
   '@swc/helpers@0.5.2':
     resolution: {integrity: sha512-E4KcWTpoLHqwPHLxidpOqQbcrZVgi0rsmmZXUle1jXmJfuIf/UWpczUJ7MZZ5tlxytgJXyp0w4PGkkeLiuIdZw==}
 
-  '@tabler/icons-react@3.1.0':
-    resolution: {integrity: sha512-k/WTlax2vbj/LpxvaJ+BmaLAAhVUgyLj4Ftgaczz66tUSNzqrAZXCFdOU7cRMYPNVBqyqE2IdQd2rzzhDEJvkw==}
+  '@tabler/icons-react@3.2.0':
+    resolution: {integrity: sha512-b1mZT1XpZrzvbM+eFe1YbYbxkzgJ18tM4knZKqXh0gnHDZ6XVLIH3TzJZ3HZ7PTkUqZLZ7XcGae3qQVGburlBw==}
     peerDependencies:
       react: '>= 16'
 
-  '@tabler/icons@3.1.0':
-    resolution: {integrity: sha512-CpZGyS1IVJKFcv88yZ2sYZIpWWhQ6oy76BQKQ5SF0fGgOqgyqKdBGG/YGyyMW632on37MX7VqQIMTzN/uQqmFg==}
+  '@tabler/icons@3.2.0':
+    resolution: {integrity: sha512-h8GQ2rtxgiSjltrVz4vcopAxTPSpUSUi5nBfJ09H3Bk4fJk6wZ/dVUjzhv/BHfDwGTkAxZBiYe/Q/T95cPeg5Q==}
 
   '@tokenizer/token@0.3.0':
     resolution: {integrity: sha512-OvjF+z51L3ov0OyAU0duzsYuvO01PH7x4t6DJx+guahgTnBHkhJdG7soQeTSFLWN3efnHyibZ4Z8l2EuWwJN3A==}
@@ -289,17 +289,17 @@ packages:
   '@types/node@16.9.1':
     resolution: {integrity: sha512-QpLcX9ZSsq3YYUUnD3nFDY8H7wctAhQj/TFKL8Ya8v5fMm3CFXxo8zStsLAl780ltoYoo1WvKUVGBQK+1ifr7g==}
 
-  '@types/node@20.12.5':
-    resolution: {integrity: sha512-BD+BjQ9LS/D8ST9p5uqBxghlN+S42iuNxjsUGjeZobe/ciXzk2qb1B6IXc6AnRLS+yFJRpN2IPEHMzwspfDJNw==}
+  '@types/node@20.12.7':
+    resolution: {integrity: sha512-wq0cICSkRLVaf3UGLMGItu/PtdY7oaXaI/RVU+xliKVOtRna3PRY57ZDfztpDL0n11vfymMUnXv8QwYCO7L1wg==}
 
   '@types/prop-types@15.7.11':
     resolution: {integrity: sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==}
 
-  '@types/react-dom@18.2.24':
-    resolution: {integrity: sha512-cN6upcKd8zkGy4HU9F1+/s98Hrp6D4MOcippK4PoE8OZRngohHZpbJn1GsaDLz87MqvHNoT13nHvNqM9ocRHZg==}
+  '@types/react-dom@18.2.25':
+    resolution: {integrity: sha512-o/V48vf4MQh7juIKZU2QGDfli6p1+OOi5oXx36Hffpc9adsHeXjVp8rHuPkjd8VT8sOJ2Zp05HR7CdpGTIUFUA==}
 
-  '@types/react@18.2.74':
-    resolution: {integrity: sha512-9AEqNZZyBx8OdZpxzQlaFEVCSFUM2YXJH46yPOiOpm078k6ZLOCcuAzGum/zK8YBwY+dbahVNbHrbgrAwIRlqw==}
+  '@types/react@18.2.79':
+    resolution: {integrity: sha512-RwGAGXPl9kSXwdNTafkOEuFrTBD5SA2B3iEB96xi8+xu5ddUa/cpvyVCSNn+asgLCTHkb5ZxN8gbuibYJi4s1w==}
 
   '@typescript-eslint/parser@6.21.0':
     resolution: {integrity: sha512-tbsV1jPne5CkFQCgPBcDOt30ItF7aJoZL997JSF7MhGQqOeT3svWRYxiqlfA5RUdlHN6Fi+EI9bxqbdyAUZjYQ==}
@@ -1585,8 +1585,8 @@ packages:
     resolution: {integrity: sha512-yMi0PlwuznKHxKmcpoOdeLwxBoVPkqZxd7q2FgMkmD3bNwvF5VW0+UlUQ1k1vmktTu4Yu13Q0RIxEP8+B+wloA==}
     engines: {node: '>= 0.4'}
 
-  typescript@5.4.4:
-    resolution: {integrity: sha512-dGE2Vv8cpVvw28v8HCPqyb08EzbBURxDpuhJvTrusShUfGnhHBafDsLdS1EhhxyL6BJQE+2cT3dDPAv+MQ6oLw==}
+  typescript@5.4.5:
+    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -1747,15 +1747,15 @@ snapshots:
       '@floating-ui/core': 1.6.0
       '@floating-ui/utils': 0.2.1
 
-  '@floating-ui/react-dom@2.0.8(react-dom@18.2.0)(react@18.2.0)':
+  '@floating-ui/react-dom@2.0.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@floating-ui/dom': 1.6.3
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
-  '@floating-ui/react@0.26.9(react-dom@18.2.0)(react@18.2.0)':
+  '@floating-ui/react@0.26.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
-      '@floating-ui/react-dom': 2.0.8(react-dom@18.2.0)(react@18.2.0)
+      '@floating-ui/react-dom': 2.0.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@floating-ui/utils': 0.2.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -1860,21 +1860,21 @@ snapshots:
       '@babel/runtime': 7.24.0
       regenerator-runtime: 0.13.11
 
-  '@mantine/core@7.7.1(@mantine/hooks@7.7.1)(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0)':
+  '@mantine/core@7.8.1(@mantine/hooks@7.8.1(react@18.2.0))(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
-      '@floating-ui/react': 0.26.9(react-dom@18.2.0)(react@18.2.0)
-      '@mantine/hooks': 7.7.1(react@18.2.0)
+      '@floating-ui/react': 0.26.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@mantine/hooks': 7.8.1(react@18.2.0)
       clsx: 2.1.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      react-number-format: 5.3.3(react-dom@18.2.0)(react@18.2.0)
-      react-remove-scroll: 2.5.7(@types/react@18.2.74)(react@18.2.0)
-      react-textarea-autosize: 8.5.3(@types/react@18.2.74)(react@18.2.0)
+      react-number-format: 5.3.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-remove-scroll: 2.5.7(@types/react@18.2.79)(react@18.2.0)
+      react-textarea-autosize: 8.5.3(@types/react@18.2.79)(react@18.2.0)
       type-fest: 4.12.0
     transitivePeerDependencies:
       - '@types/react'
 
-  '@mantine/hooks@7.7.1(react@18.2.0)':
+  '@mantine/hooks@7.8.1(react@18.2.0)':
     dependencies:
       react: 18.2.0
 
@@ -1932,12 +1932,12 @@ snapshots:
     dependencies:
       tslib: 2.6.2
 
-  '@tabler/icons-react@3.1.0(react@18.2.0)':
+  '@tabler/icons-react@3.2.0(react@18.2.0)':
     dependencies:
-      '@tabler/icons': 3.1.0
+      '@tabler/icons': 3.2.0
       react: 18.2.0
 
-  '@tabler/icons@3.1.0': {}
+  '@tabler/icons@3.2.0': {}
 
   '@tokenizer/token@0.3.0': {}
 
@@ -1951,30 +1951,31 @@ snapshots:
 
   '@types/node@16.9.1': {}
 
-  '@types/node@20.12.5':
+  '@types/node@20.12.7':
     dependencies:
       undici-types: 5.26.5
 
   '@types/prop-types@15.7.11': {}
 
-  '@types/react-dom@18.2.24':
+  '@types/react-dom@18.2.25':
     dependencies:
-      '@types/react': 18.2.74
+      '@types/react': 18.2.79
 
-  '@types/react@18.2.74':
+  '@types/react@18.2.79':
     dependencies:
       '@types/prop-types': 15.7.11
       csstype: 3.1.3
 
-  '@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.4)':
+  '@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5)':
     dependencies:
       '@typescript-eslint/scope-manager': 6.21.0
       '@typescript-eslint/types': 6.21.0
-      '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.4.4)
+      '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.4.5)
       '@typescript-eslint/visitor-keys': 6.21.0
       debug: 4.3.4
       eslint: 8.57.0
-      typescript: 5.4.4
+    optionalDependencies:
+      typescript: 5.4.5
     transitivePeerDependencies:
       - supports-color
 
@@ -1985,7 +1986,7 @@ snapshots:
 
   '@typescript-eslint/types@6.21.0': {}
 
-  '@typescript-eslint/typescript-estree@6.21.0(typescript@5.4.4)':
+  '@typescript-eslint/typescript-estree@6.21.0(typescript@5.4.5)':
     dependencies:
       '@typescript-eslint/types': 6.21.0
       '@typescript-eslint/visitor-keys': 6.21.0
@@ -1994,8 +1995,9 @@ snapshots:
       is-glob: 4.0.3
       minimatch: 9.0.3
       semver: 7.6.0
-      ts-api-utils: 1.3.0(typescript@5.4.4)
-      typescript: 5.4.4
+      ts-api-utils: 1.3.0(typescript@5.4.5)
+    optionalDependencies:
+      typescript: 5.4.5
     transitivePeerDependencies:
       - supports-color
 
@@ -2344,19 +2346,20 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-next@14.1.3(eslint@8.57.0)(typescript@5.4.4):
+  eslint-config-next@14.1.3(eslint@8.57.0)(typescript@5.4.5):
     dependencies:
       '@next/eslint-plugin-next': 14.1.3
       '@rushstack/eslint-patch': 1.7.2
-      '@typescript-eslint/parser': 6.21.0(eslint@8.57.0)(typescript@5.4.4)
+      '@typescript-eslint/parser': 6.21.0(eslint@8.57.0)(typescript@5.4.5)
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
+      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@8.57.0)
       eslint-plugin-react: 7.34.0(eslint@8.57.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.57.0)
-      typescript: 5.4.4
+    optionalDependencies:
+      typescript: 5.4.5
     transitivePeerDependencies:
       - eslint-import-resolver-webpack
       - supports-color
@@ -2369,13 +2372,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0):
+  eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0):
     dependencies:
       debug: 4.3.4
       enhanced-resolve: 5.16.0
       eslint: 8.57.0
-      eslint-module-utils: 2.8.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
+      eslint-module-utils: 2.8.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.3
       is-core-module: 2.13.1
@@ -2386,19 +2389,19 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-module-utils@2.8.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0):
+  eslint-module-utils@2.8.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0):
     dependencies:
-      '@typescript-eslint/parser': 6.21.0(eslint@8.57.0)(typescript@5.4.4)
       debug: 3.2.7
+    optionalDependencies:
+      '@typescript-eslint/parser': 6.21.0(eslint@8.57.0)(typescript@5.4.5)
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
+      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0):
+  eslint-plugin-import@2.29.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0):
     dependencies:
-      '@typescript-eslint/parser': 6.21.0(eslint@8.57.0)(typescript@5.4.4)
       array-includes: 3.1.7
       array.prototype.findlastindex: 1.2.4
       array.prototype.flat: 1.3.2
@@ -2407,7 +2410,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
+      eslint-module-utils: 2.8.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0)
       hasown: 2.0.2
       is-core-module: 2.13.1
       is-glob: 4.0.3
@@ -2417,6 +2420,8 @@ snapshots:
       object.values: 1.1.7
       semver: 6.3.1
       tsconfig-paths: 3.15.0
+    optionalDependencies:
+      '@typescript-eslint/parser': 6.21.0(eslint@8.57.0)(typescript@5.4.5)
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
@@ -2953,7 +2958,7 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next@14.1.3(react-dom@18.2.0)(react@18.2.0):
+  next@14.1.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@next/env': 14.1.3
       '@swc/helpers': 0.5.2
@@ -3139,43 +3144,46 @@ snapshots:
 
   react-is@16.13.1: {}
 
-  react-number-format@5.3.3(react-dom@18.2.0)(react@18.2.0):
+  react-number-format@5.3.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
-  react-remove-scroll-bar@2.3.6(@types/react@18.2.74)(react@18.2.0):
+  react-remove-scroll-bar@2.3.6(@types/react@18.2.79)(react@18.2.0):
     dependencies:
-      '@types/react': 18.2.74
       react: 18.2.0
-      react-style-singleton: 2.2.1(@types/react@18.2.74)(react@18.2.0)
+      react-style-singleton: 2.2.1(@types/react@18.2.79)(react@18.2.0)
       tslib: 2.6.2
+    optionalDependencies:
+      '@types/react': 18.2.79
 
-  react-remove-scroll@2.5.7(@types/react@18.2.74)(react@18.2.0):
+  react-remove-scroll@2.5.7(@types/react@18.2.79)(react@18.2.0):
     dependencies:
-      '@types/react': 18.2.74
       react: 18.2.0
-      react-remove-scroll-bar: 2.3.6(@types/react@18.2.74)(react@18.2.0)
-      react-style-singleton: 2.2.1(@types/react@18.2.74)(react@18.2.0)
+      react-remove-scroll-bar: 2.3.6(@types/react@18.2.79)(react@18.2.0)
+      react-style-singleton: 2.2.1(@types/react@18.2.79)(react@18.2.0)
       tslib: 2.6.2
-      use-callback-ref: 1.3.1(@types/react@18.2.74)(react@18.2.0)
-      use-sidecar: 1.1.2(@types/react@18.2.74)(react@18.2.0)
+      use-callback-ref: 1.3.1(@types/react@18.2.79)(react@18.2.0)
+      use-sidecar: 1.1.2(@types/react@18.2.79)(react@18.2.0)
+    optionalDependencies:
+      '@types/react': 18.2.79
 
-  react-style-singleton@2.2.1(@types/react@18.2.74)(react@18.2.0):
+  react-style-singleton@2.2.1(@types/react@18.2.79)(react@18.2.0):
     dependencies:
-      '@types/react': 18.2.74
       get-nonce: 1.0.1
       invariant: 2.2.4
       react: 18.2.0
       tslib: 2.6.2
+    optionalDependencies:
+      '@types/react': 18.2.79
 
-  react-textarea-autosize@8.5.3(@types/react@18.2.74)(react@18.2.0):
+  react-textarea-autosize@8.5.3(@types/react@18.2.79)(react@18.2.0):
     dependencies:
       '@babel/runtime': 7.24.0
       react: 18.2.0
       use-composed-ref: 1.3.0(react@18.2.0)
-      use-latest: 1.2.1(@types/react@18.2.74)(react@18.2.0)
+      use-latest: 1.2.1(@types/react@18.2.79)(react@18.2.0)
     transitivePeerDependencies:
       - '@types/react'
 
@@ -3402,9 +3410,9 @@ snapshots:
       '@tokenizer/token': 0.3.0
       ieee754: 1.2.1
 
-  ts-api-utils@1.3.0(typescript@5.4.4):
+  ts-api-utils@1.3.0(typescript@5.4.5):
     dependencies:
-      typescript: 5.4.4
+      typescript: 5.4.5
 
   tsconfig-paths@3.15.0:
     dependencies:
@@ -3457,7 +3465,7 @@ snapshots:
       is-typed-array: 1.1.13
       possible-typed-array-names: 1.0.0
 
-  typescript@5.4.4: {}
+  typescript@5.4.5: {}
 
   unbox-primitive@1.0.2:
     dependencies:
@@ -3477,33 +3485,37 @@ snapshots:
       punycode: 1.4.1
       qs: 6.12.0
 
-  use-callback-ref@1.3.1(@types/react@18.2.74)(react@18.2.0):
+  use-callback-ref@1.3.1(@types/react@18.2.79)(react@18.2.0):
     dependencies:
-      '@types/react': 18.2.74
       react: 18.2.0
       tslib: 2.6.2
+    optionalDependencies:
+      '@types/react': 18.2.79
 
   use-composed-ref@1.3.0(react@18.2.0):
     dependencies:
       react: 18.2.0
 
-  use-isomorphic-layout-effect@1.1.2(@types/react@18.2.74)(react@18.2.0):
+  use-isomorphic-layout-effect@1.1.2(@types/react@18.2.79)(react@18.2.0):
     dependencies:
-      '@types/react': 18.2.74
       react: 18.2.0
+    optionalDependencies:
+      '@types/react': 18.2.79
 
-  use-latest@1.2.1(@types/react@18.2.74)(react@18.2.0):
+  use-latest@1.2.1(@types/react@18.2.79)(react@18.2.0):
     dependencies:
-      '@types/react': 18.2.74
       react: 18.2.0
-      use-isomorphic-layout-effect: 1.1.2(@types/react@18.2.74)(react@18.2.0)
+      use-isomorphic-layout-effect: 1.1.2(@types/react@18.2.79)(react@18.2.0)
+    optionalDependencies:
+      '@types/react': 18.2.79
 
-  use-sidecar@1.1.2(@types/react@18.2.74)(react@18.2.0):
+  use-sidecar@1.1.2(@types/react@18.2.79)(react@18.2.0):
     dependencies:
-      '@types/react': 18.2.74
       detect-node-es: 1.1.0
       react: 18.2.0
       tslib: 2.6.2
+    optionalDependencies:
+      '@types/react': 18.2.79
 
   utif@2.0.1:
     dependencies:
