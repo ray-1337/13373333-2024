@@ -16,7 +16,7 @@ type WorkProp = Record<"name" | "description" | "url" | "imageURL", string> & {
 export default [
   {
     name: "cDev: Dash",
-    imageURL: "cdevdash/base.webp",
+    imageURL: "cdevdash.webp",
     url: "https://dash.cdev.shop/demo",
     description: "A Discord bot dashboard for cDev (Community Development), created with Next.js from scratch.",
     type: "website",
