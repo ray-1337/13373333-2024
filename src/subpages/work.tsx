@@ -1,3 +1,4 @@
+import { Grid } from "@mantine/core";
 import { useSetState, useDebouncedValue, useViewportSize } from "@mantine/hooks";
 import { useState, Fragment, useContext, useEffect, useRef } from "react";
 import WorksList from "@/config/work";
@@ -240,6 +241,27 @@ export default function Works(props?: { active: boolean }) {
                                 })
                               }
                             </div>
+                          )
+                        }
+
+                        {/* project snapshots */}
+                        {
+                          Array.isArray(work?.snapshotURLs) && (
+                            <Grid className={"project-snapshots"} grow={true}>
+                              {
+                                work.snapshotURLs.map((snapshot, index) => {
+                                  const imageURL = work.imageURL.startsWith("https") ? work.imageURL : cdnEndpoint + "/images/workpiece/" + snapshot;
+
+                                  return (
+                                    <Grid.Col span={windowWidth <= 768 ? 12 : 6} className={"project-snapshots-individual"} key={index} onClick={() => window.open(imageURL, "_blank")}>
+                                      <div className={"project-snapshots-individual-image-container"}>
+                                        <img src={imageURL} alt={`A snapshot of a project named ${work.name}, category ${index}`} loading={"lazy"}/>
+                                      </div>
+                                    </Grid.Col>
+                                  );
+                                })
+                              }
+                            </Grid>
                           )
                         }
                       </section>
