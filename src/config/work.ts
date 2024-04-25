@@ -170,7 +170,18 @@ export default [
     url: "https://www.youtube.com/playlist?list=PLYrHu4ar33mX9Q32QHk90SoGmZTVovVSI",
     description: "A compilation of VALORANT funny moments edit. Inspired by Jolidofc, edited on Sony Vegas.",
     embedURL: "https://www.youtube-nocookie.com/embed/videoseries?list=PLYrHu4ar33mX9Q32QHk90SoGmZTVovVSI&rel=0",
-    snapshotURLs: ["valorantmoments/snapshot/1.webp", "valorantmoments/snapshot/2.webp"]
+    snapshotURLs: ["valorantmoments/snapshot/1.webp", "valorantmoments/snapshot/2.webp"],
+    credits: {
+      "Inspired by": [
+        { name: "al1", url: "https://www.youtube.com/@al1." },
+        { name: "Jolidofc", url: "https://www.youtube.com/@Jolidofc" }
+      ],
+
+      "Edited in": {
+        name: "Adobe Premiere Pro",
+        url: "https://adobe.com"
+      }
+    }
   },
   {
     name: "IRE (03.12.2021)",
