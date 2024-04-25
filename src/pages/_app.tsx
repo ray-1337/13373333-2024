@@ -2,7 +2,8 @@ import { Fragment } from "react";
 import Head from "next/head";
 
 import "normalize.css";
-// import '@mantine/core/styles.css';
+import '@mantine/core/styles/Grid.css';
+import '@mantine/core/styles/SimpleGrid.css';
 
 // css from mine
 import "@/styles/globals.css";
