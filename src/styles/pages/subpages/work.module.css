@@ -177,7 +177,8 @@
 
 .work .rightside .preview .prevbox {
   display: block;
-  min-height: 100vh
+  min-height: 100vh;
+  padding-bottom: 5rem;
 }
 
 .work .rightside .preview .prevbox .embed {
