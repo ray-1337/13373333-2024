@@ -9,18 +9,21 @@ type WorkProp = Record<"name" | "description" | "url" | "imageURL", string> & {
 
   // mama mia
   credits?: Record<string, string | string[] | Record<"name" | "url", string> | Array<Record<"name" | "url", string>>>;
+
+  snapshotURLs?: string[];
 };
 
 export default [
   {
     name: "cDev: Dash",
-    imageURL: "cdevdash.webp",
+    imageURL: "cdevdash/base.webp",
     url: "https://dash.cdev.shop/demo",
     description: "A Discord bot dashboard for cDev (Community Development), created with Next.js from scratch.",
     type: "website",
     embedURL: "https://www.youtube-nocookie.com/embed/DQJ8P9kgkwk?rel=0",
+    snapshotURLs: ["cdevdash/snapshot/1.webp", "cdevdash/snapshot/2.webp", "cdevdash/snapshot/3.webp"],
     credits: {
-      "Idea proposed by": {
+      "Concept proposed by": {
         name: "Newton",
         url: "https://github.com/Newtonzz"
       }
@@ -33,7 +36,7 @@ export default [
     abandonedType: "Under Construction",
     type: "website",
     credits: {
-      "Idea proposed by": {
+      "Concept proposed by": {
         name: "Itchi Husky",
         url: "https://www.instagram.com/itchi.huskii/"
       }
@@ -70,7 +73,7 @@ export default [
     url: "https://cdev.shop",
     description: "My first remotely startup project to advance limitations around Discord and FiveM communities.",
     credits: {
-      "Idea proposed by": {
+      "Concept proposed by": {
         name: "Newton",
         url: "https://github.com/Newtonzz"
       }
