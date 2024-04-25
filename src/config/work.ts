@@ -185,7 +185,8 @@ export default [
     url: "https://youtube.com/@blobproj",
     description: "Creating a YouTube programming content with no retakes, and no fillers.",
     abandonedType: "Discontinued",
-    embedURL: "https://www.youtube-nocookie.com/embed/videoseries?list=PLHSePCXwuwyoFuhV9e23zu1eEjPSVQmmZ&rel=0"
+    embedURL: "https://www.youtube-nocookie.com/embed/videoseries?list=PLHSePCXwuwyoFuhV9e23zu1eEjPSVQmmZ&rel=0",
+    snapshotURLs: ["blobproj/snapshot/1.webp", "blobproj/snapshot/2.webp"],
   },
   {
     name: "Discord Bot Concerns",
