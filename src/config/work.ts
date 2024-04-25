@@ -53,6 +53,11 @@ export default [
       "Client": {
         name: "Nusantara Furry Convention",
         url: "https://instagram.com/nusa_furcon"
+      },
+      
+      "Art provided by": {
+        name: "Memu",
+        url: "https://www.instagram.com/wolfox_09"
       }
     }
   },
