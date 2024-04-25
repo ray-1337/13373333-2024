@@ -247,14 +247,14 @@ export default function Works(props?: { active: boolean }) {
                         {/* project snapshots */}
                         {
                           Array.isArray(work?.snapshotURLs) && (
-                            <Grid className={"project-snapshots"} grow={true}>
+                            <Grid className={style["project-snapshots"]} grow={true}>
                               {
                                 work.snapshotURLs.map((snapshot, index) => {
                                   const imageURL = work.imageURL.startsWith("https") ? work.imageURL : cdnEndpoint + "/images/workpiece/" + snapshot;
 
                                   return (
-                                    <Grid.Col span={windowWidth <= 768 ? 12 : 6} className={"project-snapshots-individual"} key={index} onClick={() => window.open(imageURL, "_blank")}>
-                                      <div className={"project-snapshots-individual-image-container"}>
+                                    <Grid.Col span={windowWidth <= 768 ? 12 : 6} className={style["project-snapshots-individual"]} key={index} onClick={() => window.open(imageURL, "_blank")}>
+                                      <div className={style["project-snapshots-individual-image-container"]}>
                                         <img src={imageURL} alt={`A snapshot of a project named ${work.name}, category ${index}`} loading={"lazy"}/>
                                       </div>
                                     </Grid.Col>
