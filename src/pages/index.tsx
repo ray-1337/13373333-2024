@@ -15,7 +15,7 @@ const clickableList: Array<Record<"name" | "value", string> & { isURL?: boolean 
 // social media
 const sosmedList: Array<{ icon: string | typeof IconMail, url: string }> = [
   { icon: "github", url: "https://github.com/ray-1337" },
-  { icon: "linkedin", url: "https://linkedin.com/in/ray-1337" },
+  { icon: "linkedin", url: "https://linkedin.com/in/ray1337" },
   { icon: IconMail, url: "mailto:personal@13373333.one" }
 ];
 
