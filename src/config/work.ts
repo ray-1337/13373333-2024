@@ -72,6 +72,7 @@ export default [
     imageURL: "1337.2024.webp",
     url: "https://github.com/ray-1337/13373333-2024",
     description: "The newest open-source repository of this revamped website.",
+    snapshotURLs: ["1337.2024/snapshot/1.webp", "1337.2024/snapshot/2.webp"],
   },
   {
     name: "Community Development",
