@@ -347,6 +347,11 @@
 
 .prevbox-credits-individual a {
   color: inherit;
+  transition: opacity 125ms linear;
+}
+
+.prevbox-credits-individual a:hover {
+  opacity: 0.65;
 }
 
 @keyframes buttonHoverRightArrowFallback {
