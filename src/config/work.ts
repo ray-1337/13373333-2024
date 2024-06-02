@@ -204,5 +204,11 @@ export default [
     imageURL: "article.cdev_fine_grained_security.webp",
     description: "An article about how I tried to tackle an issue that has been persisted for almost 6 years in Discord bots universe.",
     url: "https://medium.com/@diminishedfaith/794b6c7db765"
-  }
+  },
+  {
+    name: "YouTube Trimmer",
+    imageURL: "ytf.webp",
+    url: "https://ytfs.13373333.one",
+    description: "Trim a YouTube video with a specific start/end range.",
+  },
 ] as Array<WorkProp>;
