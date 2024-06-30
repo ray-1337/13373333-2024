@@ -4,6 +4,7 @@ import Head from "next/head";
 import "normalize.css";
 import '@mantine/core/styles/Grid.css';
 import '@mantine/core/styles/SimpleGrid.css';
+import '@mantine/core/styles/Flex.css';
 
 // css from mine
 import "@/styles/globals.css";
