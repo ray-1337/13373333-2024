@@ -1,25 +1,24 @@
 type AbandonType = "Discontinued" | "Under Construction";
 
-type WorkType = "website";
-
-type WorkProp = Record<"name" | "description" | "url" | "imageURL", string> & {
-  abandonedType?: AbandonType
+type WorkProp = Record<"name" | "description" | "imageURL", string> & {
+  abandonedType?: AbandonType;
   embedURL?: string;
-  type: WorkType;
+  url?: string;
+  // type: WorkType;
 
   // mama mia
   credits?: Record<string, string | string[] | Record<"name" | "url", string> | Array<Record<"name" | "url", string>>>;
 
   snapshotURLs?: string[];
+  isNsfw?: boolean;
 };
 
-export default [
+const works: Array<WorkProp> = [
   {
     name: "cDev: Dash",
     imageURL: "cdevdash.webp",
     url: "https://dash.cdev.shop/demo",
     description: "A Discord bot dashboard for cDev (Community Development), created with Next.js from scratch.",
-    type: "website",
     embedURL: "https://www.youtube-nocookie.com/embed/DQJ8P9kgkwk?rel=0",
     snapshotURLs: ["cdevdash/snapshot/1.webp", "cdevdash/snapshot/2.webp", "cdevdash/snapshot/3.webp"],
     credits: {
@@ -34,7 +33,6 @@ export default [
     imageURL: "itchi.webp",
     description: "Best friend's personal website.",
     abandonedType: "Under Construction",
-    type: "website",
     credits: {
       "Concept proposed by": {
         name: "Itchi Husky",
@@ -47,7 +45,6 @@ export default [
     imageURL: "nufc_2024.webp",
     description: "An upcoming furry convention gathering, which will take place in South Jakarta, Indonesia.",
     url: "https://nusantarafurcon.com",
-    type: "website",
     abandonedType: "Discontinued",
     credits: {
       "Client": {
@@ -212,4 +209,6 @@ export default [
     url: "https://ytfs.13373333.one",
     description: "Trim a YouTube video with a specific start/end range.",
   },
-] as Array<WorkProp>;
+];
+
+export default works;
