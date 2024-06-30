@@ -106,6 +106,18 @@
   transition: filter 200ms linear
 }
 
+.workpiece[data-is-nsfw="true"] .image {
+  filter: blur(32px) brightness(100%);
+}
+
+.workpiece[data-is-nsfw="true"]:hover .image {
+  filter: blur(16px) brightness(40%);
+}
+
+.workpiece:hover .image {
+  filter: blur(2px) grayscale(80%) brightness(50%)
+}
+
 .work .list .workpiece .image img {
   height: 100%;
   width: 100%;
@@ -149,10 +161,6 @@
 
 .work .list .workpiece:hover .name {
   opacity: 1
-}
-
-.work .list .workpiece:hover .image {
-  filter: blur(2px) grayscale(80%) brightness(50%)
 }
 
 .work .rightside .preview[data-active=false] {

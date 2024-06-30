@@ -162,7 +162,8 @@ export default [
     url: "https://www.youtube.com/playlist?list=PLGd05QsjGyxUrnRbKBGB9touvcyj51MJW",
     description: "A parodies of CupcakKe, remixed by me. i made this because i was simply bored.",
     embedURL: "https://www.youtube-nocookie.com/embed/videoseries?list=PLGd05QsjGyxUrnRbKBGB9touvcyj51MJW&rel=0",
-    snapshotURLs: ["cupcakke/snapshot/1.webp", "cupcakke/snapshot/2.webp"]
+    snapshotURLs: ["cupcakke/snapshot/1.webp", "cupcakke/snapshot/2.webp"],
+    isNsfw: true,
   },
   {
     name: "VALORANT Funny Moment Edits",

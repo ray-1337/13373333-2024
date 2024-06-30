@@ -1,4 +1,4 @@
-import { Grid } from "@mantine/core";
+import { Grid, Flex } from "@mantine/core";
 import { useSetState, useDebouncedValue, useViewportSize } from "@mantine/hooks";
 import { useState, Fragment, useContext, useEffect, useRef } from "react";
 import WorksList from "@/config/work";
@@ -301,6 +301,8 @@ export default function Works(props?: { active: boolean }) {
                 <div 
                   // @ts-expect-error
                   ref={(el) => workPieceContainerRefs.current[index] = el}
+
+                  data-is-nsfw={work?.isNsfw === true}
 
                   className={style.workpiece} key={index} onClick={() => setWorkSelection(index)}>
 
