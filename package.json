@@ -11,7 +11,7 @@
   "dependencies": {
     "@mantine/core": "^7.12.1",
     "@mantine/hooks": "^7.12.1",
-    "@tabler/icons-react": "^3.7.0",
+    "@tabler/icons-react": "^3.12.0",
     "common-tags": "^1.8.2",
     "next": "14.2.5",
     "node-vibrant": "3.1.6",
@@ -27,4 +27,7 @@
     "@types/react-dom": "^18.3.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
+    "typescript": "^5.5.4"
+  },
+  "packageManager": "pnpm@9.7.1+sha512.faf344af2d6ca65c4c5c8c2224ea77a81a5e8859cbc4e06b1511ddce2f0151512431dd19e6aff31f2c6a8f5f2aced9bd2273e1fed7dd4de1868984059d2c4247"
 }
