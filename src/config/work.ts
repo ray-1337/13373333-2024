@@ -209,6 +209,20 @@ const works: Array<WorkProp> = [
     url: "https://ytfs.13373333.one",
     description: "Trim a YouTube video with a specific start/end range.",
   },
+  {
+    name: "Waiting Broadcast Screen",
+    imageURL: "wbs/1.webp",
+    url: "https://github.com/ray-1337/broadcast-waiting-screen",
+    description: "A browser-based timer broadcast screen, integrated with OBS API.",
+    embedURL: "https://www.youtube-nocookie.com/embed/ivvtDl8u-Ro?rel=0&start=90",
+    snapshotURLs: ["wbs/1.webp", "wbs/2.webp", "wbs/3.webp"],
+    credits: {
+      "Inspired by": {
+        name: "VALORANT Champions Tour",
+        url: "https://www.youtube.com/@ValorantEsports/streams"
+      }
+    }
+  },
 ];
 
 export default works;
