@@ -2,7 +2,9 @@ import { useState, createContext, useEffect } from "react";
 import { IconMail } from "@tabler/icons-react";
 import { useDebouncedValue, useViewportSize } from "@mantine/hooks";
 import style from "@/styles/pages/index.module.css";
-import hoverStyle from "@/styles/animations/frontpageHoverBlackHole.module.css"
+import hoverStyle from "@/styles/animations/frontpageHoverBlackHole.module.css";
+
+export const runtime = "experimental-edge";
 
 // work pieces
 import WorkPieces from "@/subpages/work";
