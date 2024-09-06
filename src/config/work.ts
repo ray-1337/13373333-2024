@@ -144,7 +144,7 @@ const works: Array<WorkProp> = [
   },
   {
     name: "GMDI Discord Bot",
-    imageURL: "gmdibot.webp",
+    imageURL: "gmdibot-2024_banner.webp",
     url: "https://github.com/ray-1337/gmdi-private-bot/",
     description: "A Discord bot that is made exclusively for Geometry Dash Indonesia."
   },
