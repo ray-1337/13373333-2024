@@ -34,6 +34,7 @@ const works: Array<WorkProp> = [
     imageURL: "itchi.webp",
     description: "Best friend's personal website.",
     abandonedType: "Under Construction",
+    hide: true,
     credits: {
       "Concept proposed by": {
         name: "Itchi Husky",
@@ -63,6 +64,7 @@ const works: Array<WorkProp> = [
     name: "Personal Project Authorization",
     imageURL: "project-auth.webp",
     description: "Accessing private/in-development personal project by through Discord or Telegram authorization, built with Astro.",
+    hide: true,
     url: "https://project-authorization.13373333.one"
   },
   {
@@ -101,25 +103,29 @@ const works: Array<WorkProp> = [
     name: "Discord Voice Message",
     imageURL: "dvm.webp",
     url: "https://github.com/ray-1337/discord-voice-message",
+    hide: true,
     description: "Transform .mp3 file to Discord voice message."
   },
   {
     name: "Perceptual Hash",
     imageURL: "phash.webp",
     url: "https://npmjs.com/package/perceptual-hash",
-    description: "A simple way to generate content-based image hashes on Node.js, also used on Anti-NSFW."
+    description: "A simple way to generate content-based image hashes on Node.js, also used on Anti-NSFW.",
+    hide: true
   },
   {
     name: "Catbox",
     imageURL: "catbox.webp",
     url: "https://13373333.one/catbox",
     description: "A personal/private file storage. Powered by BunnyCDN.",
+    hide: true,
     abandonedType: "Discontinued"
   },
   {
     name: "Erase Our Memories",
     imageURL: "eom.webp",
     url: "https://github.com/ray-1337/erase-our-memories/",
+    hide: true,
     description: "A side-project/script to bulk-delete your messages from your exes contact."
   },
   {
@@ -152,6 +158,7 @@ const works: Array<WorkProp> = [
     name: "Mountain & Hung / so-vits-svc-4.0",
     imageURL: "m_h_svsf.webp",
     url: "https://huggingface.co/goodfaith/so-vits-svc-4.0-mountain-hung/",
+    hide: true,
     description: "A voice AI of Mountain & Hung voice actors, trained with 200 epochs."
   },
   {
@@ -186,6 +193,7 @@ const works: Array<WorkProp> = [
     name: "IRE (03.12.2021)",
     imageURL: "ire.webp",
     url: "https://soundcloud.com/1337-3333/sets/ire",
+    hide: true,
     description: "A way to distract me from self-harm, but it didn't help.",
     abandonedType: "Discontinued"
   },
