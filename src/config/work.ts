@@ -227,7 +227,7 @@ const works: Array<WorkProp> = [
   {
     name: "VALORANT + OBS streaming packet",
     imageURL: "wbs/1.webp",
-    url: "https://github.com/ray-1337/broadcast-waiting-screen",
+    url: "https://github.com/ray-1337/personal-valorant-broadcasting",
     description: "A browser-based timer broadcast screen, integrated with OBS API.",
     embedURL: "https://www.youtube-nocookie.com/embed/ivvtDl8u-Ro?rel=0&start=90",
     snapshotURLs: ["wbs/1.webp", "wbs/2.webp", "wbs/3.webp"],
