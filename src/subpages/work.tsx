@@ -1,4 +1,4 @@
-import { Grid, Flex } from "@mantine/core";
+import { Grid } from "@mantine/core";
 import { useSetState, useDebouncedValue, useViewportSize } from "@mantine/hooks";
 import { useState, Fragment, useContext, useEffect, useRef } from "react";
 import WorksList from "@/config/work";
