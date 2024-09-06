@@ -11,6 +11,7 @@ type WorkProp = Record<"name" | "description" | "imageURL", string> & {
 
   snapshotURLs?: string[];
   isNsfw?: boolean;
+  hide?: boolean;
 };
 
 const works: Array<WorkProp> = [
