@@ -225,7 +225,7 @@ const works: Array<WorkProp> = [
     description: "Trim a YouTube video with a specific start/end range.",
   },
   {
-    name: "Waiting Broadcast Screen",
+    name: "VALORANT + OBS streaming packet",
     imageURL: "wbs/1.webp",
     url: "https://github.com/ray-1337/broadcast-waiting-screen",
     description: "A browser-based timer broadcast screen, integrated with OBS API.",
