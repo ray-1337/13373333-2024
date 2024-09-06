@@ -24,7 +24,7 @@ function shuffleArray<R>(array: Array<R>) {
   return array;
 };
 
-const shuffledWorksList = shuffleArray(WorksList);
+const shuffledWorksList = shuffleArray(WorksList).filter(work => !work?.hide);
 
 export default function Works(props?: { active: boolean }) {
   const [worksProminentColor, setWPC] = useSetState<Record<number, string>>({});
