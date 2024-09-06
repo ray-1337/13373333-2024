@@ -148,6 +148,11 @@ const works: Array<WorkProp> = [
     url: "https://github.com/ray-1337/gmdi-private-bot/",
     description: "A Discord bot that is made exclusively for Geometry Dash Indonesia.",
     snapshotURLs: Array.from(new Array(4)).map((_, index) => `gmdibot/snapshot/${index + 1}.webp`),
+    credits: {
+      "Banner art courtesy": {
+        name: "MeFinity", url: "https://mefinity.eu.org/"
+      }
+    }
   },
   {
     name: "Discord & YouTube bot music",
