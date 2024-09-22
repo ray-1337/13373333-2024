@@ -78,6 +78,7 @@ const works: Array<WorkProp> = [
     name: "Community Development",
     imageURL: "cdev.webp",
     url: "https://cdev.shop",
+    abandonedType: "Discontinued",
     description: "My first remotely startup project to advance limitations around Discord and FiveM communities.",
     credits: {
       "Concept proposed by": {
