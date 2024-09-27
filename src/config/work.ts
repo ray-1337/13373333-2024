@@ -22,6 +22,7 @@ const works: Array<WorkProp> = [
     description: "A Discord bot dashboard for cDev (Community Development), created with Next.js from scratch.",
     embedURL: "https://www.youtube-nocookie.com/embed/DQJ8P9kgkwk?rel=0",
     snapshotURLs: ["cdevdash/snapshot/1.webp", "cdevdash/snapshot/2.webp", "cdevdash/snapshot/3.webp"],
+    abandonedType: "Discontinued",
     credits: {
       "Concept proposed by": {
         name: "Newton",
