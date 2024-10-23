@@ -16,6 +16,13 @@ type WorkProp = Record<"name" | "description" | "imageURL", string> & {
 
 const works: Array<WorkProp> = [
   {
+    name: "Anthro.id",
+    imageURL: "anthroid.webp",
+    url: "https://anthro.id",
+    description: "A reliable source of articles on anthropomorphic culture in Indonesia.",
+    snapshotURLs: ["anthroid/snapshot/1.webp", "anthroid/snapshot/2.webp", "anthroid/snapshot/3.webp"]
+  },
+  {
     name: "cDev: Dash",
     imageURL: "cdevdash.webp",
     url: "https://dash.cdev.shop/demo",
